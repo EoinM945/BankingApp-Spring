@@ -22,4 +22,6 @@ public class Role {
     @Column(unique = true)
     @NotBlank(message = "Role name is required")
     private String name; //Role NAME e.g customer, staff, admin
+
+
 }

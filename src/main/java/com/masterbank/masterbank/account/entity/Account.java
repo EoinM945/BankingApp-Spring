@@ -5,8 +5,8 @@ import com.masterbank.masterbank.authUsers.entity.User;
 import com.masterbank.masterbank.enums.AccountStatus;
 import com.masterbank.masterbank.enums.AccountType;
 import com.masterbank.masterbank.enums.Currency;
+import com.masterbank.masterbank.transactions.entity.Transaction;
 import jakarta.persistence.*;
-import jakarta.transaction.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -39,7 +39,7 @@ public class Account {
     @Column(nullable = false)
     private AccountType accountType;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 

@@ -11,7 +11,9 @@ import java.util.Map;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Response <T>{
-    private int statusCode;
+
+    public int statusCode;
     private String message;
-    private T data;private Map<String, Serializable> meta;
+    private T data;
+    private Map<String, Serializable> meta;
 }

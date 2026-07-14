@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -29,6 +30,9 @@ public class Transaction {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
     private TransactionType transactionType;
+
+    @Column(nullable = false)
+    private LocalDateTime transactionDate = LocalDateTime.now();
 
     private String description;
 

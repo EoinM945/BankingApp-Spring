@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @RequiredArgsConstructor
 public class MasterbankApplication {
 
-	//main
+
 	public static void main(String[] args) {
 		SpringApplication.run(MasterbankApplication.class, args);
 	}
